@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="index.css"> 	
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div id="starter" class="starter">
+			<h1 class="starter-title">Ready to start?</h1>
+			<button type="submit" @click="start" class="starter-button">Go!!</button>
+		</div>
+		<div id="timer" class="timer">
+			{{ timer }}
+		</div>
+		<ul id="exercises">
+			<li v-for="(exercise, index) in exercises">
+				<div class="col-md-3 portfolio-item">
+				  <div class="ejemplos">
+				    <h3>{{ index + 1}} - {{exercise}}</h3>
+				    <div class="img-color"></div>
+				    <div class="img-real">
+				      <img class="img-responsive" :src="exerciseImage(exercise)" width="700px" height="400px" alt="">
+				    </div>
+				  </div>
+				</div>
+			</li>
+		</ul>
+		<iframe id="happy_end" src="https://giphy.com/embed/TmT51OyQLFD7a" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+	</div>
+
+	<script src="index.js"></script>
+
+</body>
+</html>
